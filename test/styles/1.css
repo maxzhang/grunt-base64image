@@ -2,8 +2,11 @@ h1 {
     background-image: url("../images/001.png?base64");
 }
 h2 {
-    background-image: url("../images/002.png?base64");
+    background-image: url("../images/002.png");
 }
 h3 {
-    background-image: url("../images/003.png");
+    background-image: url("../images/003.png?base64");
+}
+h4 {
+    background-image: url("http://a.com/images/003.png");
 }
