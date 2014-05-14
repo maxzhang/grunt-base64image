@@ -20,6 +20,9 @@ grunt.loadNpmTasks('grunt-base64image');
 
 ## Base64 Image Task
 
+base64image任务使用[css-base64-images](https://github.com/maxzhang/css-base64-images)项目编码图片。
+
+
 ### Compile Options
 
 #### styles : String
@@ -50,7 +53,6 @@ module.exports = function(grunt) {
     });
 };
 ```
-
 
 
 ## Release History
