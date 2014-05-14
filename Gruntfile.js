@@ -19,7 +19,7 @@ module.exports = function(grunt) {
     });
 
     require('load-grunt-tasks')(grunt);
-    require('./task/base64image')(grunt);
+    require('./tasks/base64image')(grunt);
 
     grunt.registerTask('default', ['jshint']);
     grunt.registerTask('test', ['base64image']);
