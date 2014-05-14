@@ -1,0 +1,35 @@
+{
+    "name": "grunt-base64image",
+    "description": "Base64 images in your css file.",
+    "version": "0.0.1",
+    "homepage": "https://github.com/maxzhang/grunt-base64image",
+    "author": {
+        "name": "Max Zhang",
+        "email": "zhangdaiping@gmail.com",
+        "url": "https://github.com/maxzhang"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/maxzhang/grunt-base64image.git"
+    },
+    "licenses": "MIT",
+    "engines": {
+        "node": ">=0.8.0"
+    },
+    "dependencies": {
+        "css-base64-images": "~0.0.2",
+        "promise": "~5.0.0"
+    },
+    "devDependencies": {
+        "grunt": "~0.4.4",
+        "grunt-contrib-jshint": "~0.8.0",
+        "load-grunt-tasks": "~0.4.0"
+    },
+    "peerDependencies": {
+        "grunt": "~0.4.4"
+    },
+    "keywords": [
+        "gruntplugin",
+        "css-base64-image"
+    ]
+}
