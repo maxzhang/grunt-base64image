@@ -1,7 +1,7 @@
 {
     "name": "grunt-base64image",
     "description": "Base64 images in your css file.",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "homepage": "https://github.com/maxzhang/grunt-base64image",
     "author": {
         "name": "Max Zhang",
@@ -17,7 +17,7 @@
         "node": ">=0.8.0"
     },
     "dependencies": {
-        "css-base64-images": "~0.0.3",
+        "css-base64-images": "~0.0.4",
         "promise": "~5.0.0"
     },
     "devDependencies": {
