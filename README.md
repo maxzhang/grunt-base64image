@@ -54,6 +54,3 @@ module.exports = function(grunt) {
 };
 ```
 
-
-## Release History
-_(Nothing yet)_
