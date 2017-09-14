@@ -27,13 +27,13 @@ base64image任务使用[css-base64-images](https://github.com/maxzhang/css-base6
 
 #### styles : String
 指定CSS源目录
+#### relative : String
+指定CSS中相对路径的目录，
+如果没有指定，那么默认采用styles
 
 #### root : String
-指定CSS的路径，和css-base64-images root概念一致。
-比如root 为 a/foo/css
+指定CSS中应用 "/image/a.png" 的根目录
 
-那么在css 中 可以使用 ../image 
-来得到 a/foo/image 这个路径
 
 #### dest : String
 指定输出目录
@@ -50,7 +50,7 @@ module.exports = function(grunt) {
         base64image: {
             css: {
                 styles: 'app/styles/',
-                root: 'app/images/',
+                relative: 'src/images/',
                 dest: 'dest/styles/base64/'
             }
         }

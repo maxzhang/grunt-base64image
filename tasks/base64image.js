@@ -6,9 +6,10 @@ module.exports = function(grunt) {
         base64image = require('css-base64-images'),
         Promise = require('promise');
 
-    function base64FromFile(cssFile, imageDir, dest) {
+    function base64FromFile(cssFile, relative,root, dest) {
         return new Promise(function(resolve, reject) {
-            base64image.fromFile(cssFile, imageDir, function(err, css) {
+            var css = fs.readFileSync(cssFile);
+            base64image.fromString(css, relative, root, function(err, css){
                 if (err) {
                     reject(err);
                 } else {
@@ -27,7 +28,8 @@ module.exports = function(grunt) {
             done = self.async();
             promiseArr = [];
             grunt.file.recurse(file.styles, function(abspath, rootdir, subdir, filename) {
-                promiseArr.push(base64FromFile(abspath, file.root, path.join(file.dest, subdir || '', filename)));
+                if(!file.relative) file.relative = file.styles;
+                promiseArr.push(base64FromFile(abspath, file.relative , file.root, path.join(file.dest, subdir || '', filename)));
             });
             Promise.all(promiseArr).done(function() {
                 grunt.log.writeln('Base64 ' + String(promiseArr.length).cyan + ' files');
