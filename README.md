@@ -35,7 +35,7 @@ base64image任务使用[css-base64-images](https://github.com/maxzhang/css-base6
 来得到 a/foo/image 路径
 
 #### dest : String
-指定输出目录，
+指定输出目录
 
 
 ### Usage Examples
@@ -49,8 +49,8 @@ module.exports = function(grunt) {
         base64image: {
             css: {
                 styles: 'app/styles/',
-                root  : 'app/images/',
-                dest  : 'dest/styles/base64/'
+                root: 'app/images/',
+                dest: 'dest/styles/base64/'
             }
         }
     });
