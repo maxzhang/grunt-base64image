@@ -12,8 +12,8 @@ module.exports = function(grunt) {
         base64image: {
             css: {
                 styles: 'test/styles/',
-                images:'test/images/',
-                dest: 'test/dest/'
+                root  : 'test/images/',
+                dest  : 'test/dest/'
             }
         }
     });
