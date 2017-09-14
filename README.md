@@ -29,10 +29,11 @@ base64image任务使用[css-base64-images](https://github.com/maxzhang/css-base6
 指定CSS源目录
 
 #### root : String
-指定CSS的相对路径，和css-base64-images概念一致。
+指定CSS的路径，和css-base64-images root概念一致。
 比如root 为 a/foo/css
+
 那么在css 中 可以使用 ../image 
-来得到 a/foo/image 路径
+来得到 a/foo/image 这个路径
 
 #### dest : String
 指定输出目录
