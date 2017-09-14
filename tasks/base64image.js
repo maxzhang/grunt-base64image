@@ -24,22 +24,17 @@ module.exports = function(grunt) {
             promiseArr,
             done;
         this.files.forEach(function(file) {
-            if (grunt.file.exists(file.images)) {
-                done = self.async();
-                promiseArr = [];
-                grunt.file.recurse(file.styles, function(abspath, rootdir, subdir, filename) {
-                    promiseArr.push(base64FromFile(abspath, file.images, path.join(file.dest, subdir || '', filename)));
-                });
-                Promise.all(promiseArr).done(function() {
-                    grunt.log.writeln('Base64 ' + String(promiseArr.length).cyan + ' files');
-                    done();
-                }, function(err) {
-                    grunt.fail.fatal(err);
-                });
-            } else {
-                grunt.log.writeln('No such css file to base64');
-                grunt.file.copy(file.styles, file.dest);
-            }
+            done = self.async();
+            promiseArr = [];
+            grunt.file.recurse(file.styles, function(abspath, rootdir, subdir, filename) {
+                promiseArr.push(base64FromFile(abspath, file.root, path.join(file.dest, subdir || '', filename)));
+            });
+            Promise.all(promiseArr).done(function() {
+                grunt.log.writeln('Base64 ' + String(promiseArr.length).cyan + ' files');
+                done();
+            }, function(err) {
+                grunt.fail.fatal(err);
+            });
         });
     });
 };
